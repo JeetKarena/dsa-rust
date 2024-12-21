@@ -1,7 +1,9 @@
 ```
                                     DSA-Rust
                         Data Structures & Algorithms in Rust
-
+<div style="display: grid; grid-template-rows: minmax(2.5rem, 12vmin) 1fr 5rem;">
+  <header>
+    <pre style="font-size: max(0.2rem, 1vmin); white-space: pre-wrap; overflow-x: auto;">
   .  .. .. ..  .  .. .. ..  .  .. .....  .  .. .. ..  .  .. ..  .  ..... ..  .  .. .. ..  .  .. .. .
 .. .. ..  .  .. ..  .  .. .. .. ..  .. .. ..  ..... .. ..  .  .. .. ..  . ... .. ..  .  .. ..  .  ..
   .. .. .. ..  .. .. .. .. ..  .. .. .. ++  .. .+++.  .  ++ ..  .  .. .. ..  .  .. .. ..  .  .. .. .
@@ -53,6 +55,9 @@
           \ \ \__/ / //_/\__/ / /  / /_________/\ \ \ 
            \ \___\/ / \ \/___/ /  / / /_       __\ \_\
             \/_____/   \_____\/   \_\___\     /____/_/
+</pre>
+  </header>
+</div>
 ```
 
 # 🦀 DSA in Rust: High-Performance Data Structures & Algorithms
