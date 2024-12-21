@@ -168,7 +168,7 @@ Give a ⭐️ if this project helped you!
 
 ## 📧 Contact
 
-Jeet Karena - [@JeetKarena](https://www.linkedin.com/in/jeet-karena-941323243/)
+Jeet Karena - [@JeetKarena](www.linkedin.com/in/jeet-karena-941323243)
 
 Project Link: [https://github.com/JeetKarena/dsa-rust](https://github.com/JeetKarena/dsa-rust)
 
