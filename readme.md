@@ -132,6 +132,20 @@ MergeSort (1M elements):   145 ms
 BubbleSort (1M elements):  2,431 ms
 ```
 
+## 🔬 Benchmark Setup
+
+### Data Generation
+We use a sophisticated data generation pipeline to ensure consistent and reliable benchmarking:
+
+```rust
+use dsa_in_rust::utils::helpers::{generate_sorted_integers, shuffle_integers, write_integers_to_file};
+
+// Generate 1 million integers for benchmarking
+let count = 1_000_000;
+let sorted_integers = generate_sorted_integers(count);
+write_integers_to_file("sorted_integers.txt", &sorted_integers)?;
+```
+
 ## 🛠️ Building and Testing
 
 ```bash
