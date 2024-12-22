@@ -160,6 +160,9 @@ cargo bench
 
 # Run examples
 cargo run --example sorting_example
+
+# Run specific algorithm benchmark
+cargo bench --bench sorting_bench -- quick_sort
 ```
 
 ## 🤝 Contributing
