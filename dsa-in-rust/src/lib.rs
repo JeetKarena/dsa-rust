@@ -41,6 +41,4 @@ pub mod utils {
 
 // Re-export commonly used items
 pub use algorithms::sorting::*;
-pub use algorithms::searching::*;
-pub use data_structures::*;
 pub use utils::helpers::*;

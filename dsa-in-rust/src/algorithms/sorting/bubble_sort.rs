@@ -12,6 +12,8 @@
 /// # Example
 ///
 /// ```
+/// use dsa_in_rust::algorithms::sorting::bubble_sort::bubble_sort;
+///
 /// let mut data = [64, 34, 25, 12, 22, 11, 90];
 /// bubble_sort(&mut data);
 /// assert_eq!(data, [11, 12, 22, 25, 34, 64, 90]);

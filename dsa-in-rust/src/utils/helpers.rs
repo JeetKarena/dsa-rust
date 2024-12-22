@@ -15,6 +15,8 @@ use std::io::{self, BufWriter, Write};
 /// # Examples
 ///
 /// ```
+/// use dsa_in_rust::utils::helpers::generate_sorted_integers;
+///
 /// let sorted_integers = generate_sorted_integers(5);
 /// assert_eq!(sorted_integers, vec![1, 2, 3, 4, 5]);
 /// ```
@@ -36,6 +38,8 @@ pub fn generate_sorted_integers(count: usize) -> Vec<i32> {
 /// # Examples
 ///
 /// ```
+/// use dsa_in_rust::utils::helpers::write_integers_to_file;
+///
 /// let integers = vec![1, 2, 3, 4, 5];
 /// write_integers_to_file("output.txt", &integers).expect("Failed to write to file");
 /// ```
@@ -57,6 +61,8 @@ pub fn write_integers_to_file(filename: &str, integers: &[i32]) -> io::Result<()
 /// # Examples
 ///
 /// ```
+/// use dsa_in_rust::utils::helpers::shuffle_integers;
+///
 /// let mut integers = vec![1, 2, 3, 4, 5];
 /// shuffle_integers(&mut integers);
 /// ```
