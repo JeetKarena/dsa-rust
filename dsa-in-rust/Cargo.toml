@@ -8,4 +8,9 @@ rand = "0.8.5"
 cargo-modules = "0.21.1"
 
 [dev-dependencies]
-criterion = "0.5.1"
+criterion = "0.5.0"
+
+[[bench]]
+name = "bubble_sort_bench"
+harness = false
+path = "benches/sorting/bubble_sort_bench.rs"

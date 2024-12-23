@@ -1,13 +1,12 @@
 // src/algorithms/sorting/bubble_sort.rs
 
-/// Optimized Bubble Sort implementation
+/// Optimized Bubble Sort implementation for generic types
 ///
-/// This function sorts an array of integers in ascending order using the Bubble Sort algorithm.
-/// The optimization includes an early exit if the array is already sorted.
+/// # Type Parameters
+/// * `T` - Type that implements Ord trait
 ///
 /// # Arguments
-///
-/// * `arr` - A mutable slice of integers to be sorted.
+/// * `arr` - A mutable slice of type T to be sorted
 ///
 /// # Example
 ///
@@ -18,28 +17,31 @@
 /// bubble_sort(&mut data);
 /// assert_eq!(data, [11, 12, 22, 25, 34, 64, 90]);
 /// ```
-pub fn bubble_sort(arr: &mut [i32]) {
+///
+/// # Performance
+/// - Time Complexity: O(n²) worst/average case, O(n) best case
+/// - Space Complexity: O(1)
+/// - Stable: Yes
+/// - Adaptive: Yes (optimized for nearly sorted arrays)
+pub fn bubble_sort<T: Ord>(arr: &mut [T]) {
+    if arr.len() <= 1 {
+        return;
+    }
+
     let mut n = arr.len();
-    let mut swapped;
+    let mut new_n;
 
-    // Outer loop to traverse through all elements
-    while n > 1 {
-        swapped = false;
-
-        // Inner loop to compare adjacent elements
+    loop {
+        new_n = 0;
         for i in 1..n {
             if arr[i - 1] > arr[i] {
                 arr.swap(i - 1, i);
-                swapped = true;
+                new_n = i;
             }
         }
-
-        // If no elements were swapped, the array is already sorted
-        if !swapped {
+        if new_n == 0 {
             break;
         }
-
-        // Reduce the range of the next pass
-        n -= 1;
+        n = new_n;
     }
 }
