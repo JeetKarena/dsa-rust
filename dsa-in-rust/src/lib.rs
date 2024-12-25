@@ -23,7 +23,7 @@ pub mod algorithms {
 
 pub mod data_structures {
     //! Custom implementations of fundamental data structures
-    
+    pub mod graph;
 }
 
 pub mod utils {
@@ -41,4 +41,5 @@ pub mod utils {
 
 // Re-export commonly used items
 pub use algorithms::sorting::*;
+pub use data_structures::*;
 pub use utils::helpers::*;
