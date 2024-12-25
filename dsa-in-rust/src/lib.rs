@@ -17,7 +17,7 @@ pub mod algorithms {
 
     pub mod searching {
         //! Searching algorithm implementations including:
-       
+       pub mod dfs;
     }
 }
 
