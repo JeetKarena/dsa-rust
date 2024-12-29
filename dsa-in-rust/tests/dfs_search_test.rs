@@ -161,5 +161,10 @@ fn test_dense_graph() {
         vec![0, 1, 2]
     ];
     let dfs = DfsSearch::new(&graph);
-    assert_eq!(dfs.search(0, 3), Some(vec![0, 3]));
+    let result = dfs.search(0, 3);
+    assert!(result.is_some());
+    let path = result.unwrap();
+    assert!(path.starts_with(&[0]));
+    assert!(path.ends_with(&[3]));
+    assert!(path.len() <= 2); // Direct path should be length 2
 }

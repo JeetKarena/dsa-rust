@@ -121,12 +121,10 @@ impl<'a> DfsSearch<'a> {
         visited: &mut HashSet<usize>, 
         path: &mut Vec<usize>
     ) -> Option<Vec<usize>> {
-        // Boundary check
         if current >= self.graph.len() {
             return None;
         }
 
-        // Mark current vertex as visited and add to path
         visited.insert(current);
         path.push(current);
 
@@ -135,7 +133,13 @@ impl<'a> DfsSearch<'a> {
             return Some(path.clone());
         }
 
-        // Recursively explore unvisited neighbors
+        // First check direct edge to target
+        if self.graph[current].contains(&target) {
+            path.push(target);
+            return Some(path.clone());
+        }
+
+        // Then explore other paths
         for &next in &self.graph[current] {
             if !visited.contains(&next) {
                 if let Some(result) = self.dfs(next, target, visited, path) {
@@ -144,7 +148,6 @@ impl<'a> DfsSearch<'a> {
             }
         }
 
-        // Backtrack by removing current vertex from path
         path.pop();
         None
     }
